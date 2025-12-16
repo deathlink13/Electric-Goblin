@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acerca – ELECTRIC GOBLIN TATTOO OFICIAL</title>
+  <meta name="description" content="Bienvenido a Electric Goblin, un estudio de tatuajes donde la realidad se retuerce, los colores estallan y la imaginación toma forma en la piel.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Metal+Mania&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    *, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Nunito', sans-serif;
+      line-height: 1.6;
+      color: #fff;
+      background: #000;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+    .text-center { text-align: center; }
+    .d-flex { display: flex; }
+    .justify-between { justify-content: space-between; }
+    .align-center { align-items: center; }
+    .flex-wrap { flex-wrap: wrap; }
+    .gap-1 { gap: 1rem; }
+    .mb-2 { margin-bottom: 1rem; }
+    .mb-3 { margin-bottom: 1.5rem; }
+    img { max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Todos los textos usan Metal Mania */
+    h1, h2, h3, h4, h5, h6, .btn, nav a, .social-icon, .copyright, footer p, .about-text p, .section-title {
+      font-family: 'Metal Mania', cursive;
+    }
+
+    /* Header */
+    header { padding: 1rem 0; border-bottom: 1px solid #ffce00; }
+    .header-top { justify-content: space-between; }
+    .social-icons { display: flex; gap: 0.8rem; }
+    .social-icon {
+      display: flex; align-items: center; justify-content: center;
+      width: 40px; height: 40px; border-radius: 10%;
+      background: #69727d; color: white;
+    }
+    .social-icon:hover { opacity: 0.85; }
+    .social-icon.facebook { background: #3b5998; }
+    .social-icon.instagram { background: #262626; }
+
+    /* Navegación */
+    nav ul { list-style: none; display: flex; gap: 1.5rem; margin-top: 1rem; justify-content: center; }
+    nav a {
+      font-weight: bold;
+      padding: 0.4rem 0.8rem;
+      color: #fff;
+      font-size: 1.2rem;
+    }
+    nav a:hover, nav a.active {
+      text-decoration: underline;
+      color: #ffce00;
+    }
+
+    /* Hero / About Content */
+    .about-section { padding: 3rem 0; background: #000; }
+    .about-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .section-title {
+      font-size: 2.6rem;
+      margin-bottom: 2rem;
+      color: #fff;
+      text-align: center;
+      text-shadow: 2px 2px 0 #000, -2px -2px 0 #000;
+    }
+
+    .about-text p {
+      font-size: 1.6rem;
+      line-height: 1.5;
+      margin-bottom: 1.8rem;
+      text-align: center;
+      
+      text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        3px -3px 0 #333;
+    }
+
+    .highlight {
+      color: #ffce00;
+      text-shadow: 1px 1px 0 #000;
+    }
+
+    /* Contacto destacado */
+    .whatsapp-cta {
+      text-align: center;
+      margin: 3rem 0;
+      padding: 1.5rem;
+      background: rgba(255, 206, 0, 0.1);
+      border: 2px dashed #ffce00;
+      border-radius: 12px;
+    }
+    .whatsapp-cta h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #ffce00;
+      text-shadow: 1px 1px 0 #000;
+    }
+    .whatsapp-cta p {
+      font-size: 1.4rem;
+      background: none;
+      color: #ffce00;
+      -webkit-background-clip: unset;
+      background-clip: unset;
+      text-shadow: 1px 1px 0 #000;
+    }
+    .whatsapp-link {
+      color: #25d366;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer { background: #000; padding: 2.5rem 0 1.5rem; }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    footer h3 {
+      margin-bottom: 0.8rem;
+      font-size: 1.4rem;
+      color: #fff;
+      text-shadow: 1px 1px 0 #000;
+    }
+    footer p, footer a {
+      line-height: 1.7;
+      color: #fff;
+      font-size: 1.1rem;
+    }
+    .copyright {
+      text-align: center;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .section-title { font-size: 2rem; }
+      .about-text p { font-size: 1.3rem; }
+      .whatsapp-cta h3 { font-size: 1.6rem; }
+      .whatsapp-cta p { font-size: 1.2rem; }
+      .header-top { flex-direction: column; gap: 1rem; text-align: center; }
+      nav ul { flex-direction: column; align-items: center; gap: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="d-flex justify-between align-center flex-wrap header-top">
+        <img src="../wp-content/uploads/2023/08/bandera-mexico-1.png" alt="México" width="50">
+        <img src="../wp-content/uploads/2023/08/images.png" alt="Electric Goblin Tattoo" width="100">
+        <div class="social-icons">
+          <a href="https://m.facebook.com/people/Electric-Goblin-Tattoo/100066915141835/" target="_blank" class="social-icon facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/electricgoblin.tattoo/" target="_blank" class="social-icon instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">home</a></li>
+          <li><a href="#" class="active">Acerca</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido "Acerca" -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-content">
+        <h2 class="section-title">Electric Goblin: Donde la tinta cobra vida</h2>
+
+        <div class="about-text">
+          <p>Bienvenido a <span class="highlight">Electric Goblin</span>, un estudio de tatuajes donde la realidad se retuerce, los colores estallan y la imaginación toma forma en la piel. Aquí no solo tatuamos… creamos portales hacia otros mundos, convertimos ideas en criaturas vivas y electrificamos cada diseño con el espíritu rebelde de lo imposible.</p>
+
+          <p>No somos un estudio convencional. No buscamos lo simple. Nos alimentamos de la locura creativa, de los trazos que desafían lo establecido, de la tinta que fluye como un conjuro antiguo sobre la piel. Si alguna vez imaginaste un tatuaje que parece arrancado de un sueño, de una visión cósmica o de un delirio eléctrico, este es el lugar donde cobra vida.</p>
+
+          <p><strong>La energía del duende eléctrico:</strong><br>
+          El <span class="highlight">Electric Goblin</span> no es solo un nombre, es una fuerza que habita en cada aguja, en cada gota de tinta. Es el duende travieso que susurra en tu oído cuando te atreves a romper las reglas, la chispa que enciende la creatividad y la corriente que recorre tu piel cuando la máquina empieza a vibrar. Aquí, los límites solo existen para ser destrozados.</p>
+
+          <p>Desde tatuajes biomecánicos que parecen fusionarse con tu carne, hasta diseños psicodélicos que explotan en colores vibrantes. Desde líneas oscuras y retorcidas que evocan criaturas de otro mundo, hasta piezas minimalistas con un significado profundo. Todo lo que imagines (y lo que aún no has imaginado) puede volverse real en nuestras manos.</p>
+
+          <p><strong>Para los espíritus indomables:</strong><br>
+          Si eres de los que buscan un tatuaje común, quizás no seamos para ti. Pero si quieres que tu piel cuente una historia, que tu tatuaje tenga alma, que cada línea tenga una razón de existir… entonces acabas de encontrar tu tribu.</p>
+
+          <p>En <span class="highlight">Electric Goblin</span>, la tinta no es solo tinta. Es una declaración de poder, una marca de valentía, un ritual eléctrico que transforma a quienes se atreven a entrar.</p>
+
+          <p>¿Listo para el viaje?<br>
+          <strong>Déjate poseer por el duende eléctrico.</strong></p>
+        </div>
+
+        <!-- CTA WhatsApp -->
+        <div class="whatsapp-cta">
+          <h3>¡ATENCIÓN SIN CITA PREVIA!</h3>
+          <p>Mándanos WhatsApp al <a href="https://wa.me/525636581075" class="whatsapp-link" target="_blank">56 36 58 10 75</a> 💥</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Contacto</h3>
+          <p>Teléfono: 56-36-58-10-75</p>
+          <div class="social-icons" style="justify-content: flex-start;">
+            <a href="https://m.facebook.com/people/Electric-Goblin-Tattoo/100066915141835/" target="_blank" class="social-icon facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/electricgoblin.tattoo/" target="_blank" class="social-icon instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3>Horario</h3>
+          <p>Lunes a domingo<br>11:00am a 11:00pm</p>
+        </div>
+        <div>
+          <h3>Dirección</h3>
+          <p>Av. Primero de Mayo 248 – A,<br>San Pedro de los Pinos,<br>Benito Juárez, 03800 CDMX</p>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2023 by electric goblin tattoo oficial
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

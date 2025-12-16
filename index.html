@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ELECTRIC GOBLIN TATTOO OFICIAL</title>
+  <meta name="description" content="Tatuajes que espantan a tu tía. CDMX.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Metal+Mania&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* --- ESTILOS GENERALES --- */
+    *, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Nunito', sans-serif;
+      line-height: 1.6;
+      color: #fff;
+      background: #000;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+    .text-center { text-align: center; }
+    .d-flex { display: flex; }
+    .justify-between { justify-content: space-between; }
+    .align-center { align-items: center; }
+    .flex-wrap { flex-wrap: wrap; }
+    .gap-1 { gap: 1rem; }
+    .mb-2 { margin-bottom: 1rem; }
+    .mb-3 { margin-bottom: 1.5rem; }
+    img { max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+
+    /* TODOS los textos usan Metal Mania */
+    h1, h2, h3, h4, h5, h6, .btn, nav a, .social-icon, .copyright, footer p, .hero-text p, .location h2 {
+      font-family: 'Metal Mania', cursive;
+    }
+
+    /* Header */
+    header { padding: 1rem 0; border-bottom: 1px solid #ffce00; }
+    .header-top { justify-content: space-between; }
+    .social-icons { display: flex; gap: 0.8rem; }
+    .social-icon {
+      display: flex; align-items: center; justify-content: center;
+      width: 40px; height: 40px; border-radius: 10%;
+      background: #69727d; color: white;
+    }
+    .social-icon:hover { opacity: 0.85; }
+    .social-icon.facebook { background: #3b5998; }
+    .social-icon.instagram { background: #262626; }
+
+    /* Navegación */
+    nav ul { list-style: none; display: flex; gap: 1.5rem; margin-top: 1rem; justify-content: center; }
+    nav a {
+      font-weight: bold;
+      padding: 0.4rem 0.8rem;
+      color: #fff;
+      font-size: 1.2rem;
+    }
+    nav a:hover, nav a.active {
+      text-decoration: underline;
+      color: #ffce00;
+    }
+
+    /* Hero - Alineación centrada y legible */
+    .hero { padding: 2rem 0; background: #000; }
+    .hero-content {
+      display: flex;
+      gap: 2rem;
+      align-items: center; /* Centrado vertical */
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero-image-col {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+    .hero-text-col {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hero-text h1 {
+      font-size: 2.8rem; /* Aumentado ligeramente para equilibrio */
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+      color: #fff;
+      text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000;
+      letter-spacing: -1px;
+      text-align: center; /* Centrado del título */
+    }
+
+    /* ¡PÁRRAFOS MÁS GRANDES Y SUPER LEGIBLES! */
+    .hero-text p {
+      font-size: 1.6rem; /* Tamaño grande para poca visibilidad */
+      line-height: 1.5;
+      margin-bottom: 1.4rem;
+      
+      /* Sombras múltiples */
+      text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        3px -3px 0 #333,
+        -3px 3px 0 #222;
+      text-align: center; /* Centrado */
+    }
+
+    /* Galería */
+    .gallery { padding: 2rem 0; background: #000; }
+    .gallery-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.2rem;
+      color: #fff;
+      text-shadow: 2px 2px 0 #000, -2px -2px 0 #000;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 1rem;
+      justify-content: center;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item img:hover {
+      transform: scale(1.02);
+    }
+    .gallery-item:nth-child(13) {
+      grid-column: 2;
+    }
+
+    /* Botones */
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .btn {
+      display: inline-block;
+      background: #ffce00;
+      color: #000;
+      padding: 0.8rem 1.8rem;
+      border-radius: 50px;
+      font-weight: bold;
+      text-align: center;
+      transition: background 0.3s ease;
+      font-size: 1.3rem;
+      text-shadow: 1px 1px 0 #000;
+    }
+    .btn:hover { background: #e5b800; }
+
+    /* Ubicación */
+    .location { padding: 2rem 0; background: #000; }
+    .location h2 {
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: #fff;
+      text-shadow: 2px 2px 0 #000, -2px -2px 0 #000;
+    }
+    iframe { width: 100%; height: 300px; border: 0; border-radius: 8px; }
+
+    /* Footer */
+    footer { background: #000; padding: 2.5rem 0 1.5rem; }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    footer h3 {
+      margin-bottom: 0.8rem;
+      font-size: 1.4rem;
+      color: #fff;
+      text-shadow: 1px 1px 0 #000;
+    }
+    footer p, footer a {
+      line-height: 1.7;
+      color: #fff;
+      font-size: 1.1rem;
+    }
+    .copyright {
+      text-align: center;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-text h1 {
+        font-size: 2.2rem;
+        text-align: center;
+      }
+      .hero-text p {
+        font-size: 1.4rem; /* un poco más pequeño en móvil, pero sigue siendo grande */
+        text-align: center;
+      }
+      .header-top {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+      }
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+      .gallery-item img {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="d-flex justify-between align-center flex-wrap header-top">
+        <img src="wp-content/uploads/2023/08/bandera-mexico-1.png" alt="México" width="50">
+        <img src="wp-content/uploads/2023/08/images.png" alt="Electric Goblin Tattoo" width="100">
+        <div class="social-icons">
+          <a href="https://m.facebook.com/people/Electric-Goblin-Tattoo/100066915141835/" target="_blank" class="social-icon facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/electricgoblin.tattoo/" target="_blank" class="social-icon instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" class="active">home</a></li>
+          <li><a href="acerca/acerca.html">Acerca</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero principal -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-image-col">
+          <img src="wp-content/uploads/2023/08/tatuaje-1.jpg" alt="Tatuaje destacado">
+        </div>
+        <div class="hero-text-col">
+          <div class="hero-text">
+            <h1>TATUAJES QUE ESPANTAN A TU TÍA. CDMX</h1>
+            <p>Si ya tienes la decisión de emprender un proyecto emocionante, como un viaje, pero aún no tienes claro cuál será el destino que deseas explorar, no hay razón para preocuparse. En nuestra plataforma, estamos aquí para brindarte apoyo en esta etapa de planificación.</p>
+            <p>Hemos trabajado arduamente para compilar una amplia gama de destinos, experiencias y testimonios de viajeros reales. De esta manera, podrás explorar y descubrir los lugares más fascinantes, y elegir cuáles resuenan más contigo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería -->
+  <section class="gallery">
+    <div class="container">
+      <h2 class="gallery-title">GALERÍA DE TATUAJES</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="wp-content/uploads/2023/08/tatuaje-2.jpg" alt="Tatuaje 2"></div>
+        <div class="gallery-item"><img src="wp-content/uploads/2023/08/tatuaje-3.jpg" alt="Tatuaje 3"></div>
+        <div class="gallery-item"><img src="wp-content/uploads/2023/08/tatuaje-4.jpg" alt="Tatuaje 4"></div>
+        <div class="gallery-item"><img src="wp-content/uploads/2023/08/tatuaje-5.jpg" alt="Tatuaje 5"></div>
+        <div class="gallery-item"><img src="wp-content/uploads/2023/08/tatuaje-6.jpg" alt="Tatuaje 6"></div>
+        <div class="gallery-item"><img src="wp-content/uploads/2023/08/tatuaje-7.jpg" alt="Tatuaje 7"></div>
+        <div class="gallery-item"><img src="wp-content/uploads/2023/08/tatuaje-8.jpg" alt="Tatuaje 8"></div>
+        <div class="gallery-item"><img src="wp-content/uploads/2023/08/tatuaje-9.jpg" alt="Tatuaje 9"></div>
+        <div class="gallery-item"><img src="wp-content/uploads/2023/08/tatuaje-10.jpg" alt="Tatuaje 10"></div>
+        <div class="gallery-item"><img src="wp-content/uploads/2023/08/tatuaje-11.jpg" alt="Tatuaje 11"></div>
+        <div class="gallery-item"><img src="wp-content/uploads/2023/08/tatuaje-12.jpg" alt="Tatuaje 12"></div>
+        <div class="gallery-item"><img src="wp-content/uploads/2023/08/tatuaje-13.jpg" alt="Tatuaje 13"></div>
+        <div class="gallery-item"><img src="wp-content/uploads/2023/08/tatuaje-14.jpg" alt="Tatuaje 14"></div>
+      </div>
+
+      <div class="cta-buttons">
+        <a href="https://www.instagram.com/blacktormenttattoo/" target="_blank" class="btn">BLACK TORMENT</a>
+        <a href="https://www.instagram.com/plagavisceral/" target="_blank" class="btn">PLAGA VISCERAL</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ubicación -->
+  <section class="location">
+    <div class="container text-center">
+      <h2>¿dónde encontrarnos?</h2>
+      <iframe
+        src="https://maps.google.com/maps?q=Av.+Primero+de+Mayo+248+%E2%80%93+A,+San+Pedro+de+los+Pinos,+Benito+Ju%C3%A1rez,+03800+Ciudad+de+M%C3%A9xico,+CDMX&t=m&z=15&output=embed&iwloc=near"
+        title="Electric Goblin Tattoo"
+        loading="lazy"
+      ></iframe>
+      <br>
+      <a href="acerca/index.html" class="btn">conoce nuestro estudio</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Contacto</h3>
+          <p>Teléfono: 56-36-58-10-75</p>
+          <div class="social-icons" style="justify-content: flex-start;">
+            <a href="https://m.facebook.com/people/Electric-Goblin-Tattoo/100066915141835/" target="_blank" class="social-icon facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/electricgoblin.tattoo/" target="_blank" class="social-icon instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3>Horario</h3>
+          <p>Lunes a domingo<br>11:00am a 11:00pm</p>
+        </div>
+        <div>
+          <h3>Dirección</h3>
+          <p>Av. Primero de Mayo 248 – A,<br>San Pedro de los Pinos,<br>Benito Juárez, 03800 CDMX</p>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2023 by electric goblin tattoo oficial
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
